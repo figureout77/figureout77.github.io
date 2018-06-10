@@ -1,8 +1,8 @@
 ---
-title: 201805-git-to-know
+title: git-notes
 date: 2018-05-22 17:43:19
-tags: ['git']
-categories:
+tags: [git]
+categories: 技术
 ---
 ## 基础知识
 ### 介绍
@@ -15,6 +15,7 @@ categories:
 ### git基础
 - Git对待数据像是一个快照流。每个版本保存最新文件状态，而不是新老文件之间的差异。如果文件没有修改，Git不再重新存储该文件，而是只保留一个链接指向之前存储的文件。  
 
+<!-- more -->
 ![Git快照](https://git-scm.com/book/en/v2/images/snapshots.png)
 - Git 用以计算校验和的机制叫做 SHA-1 散列（hash，哈希）。 这是一个由 40 个十六进制字符（0-9 和 a-f）组成字符串，基于 Git 中文件的内容或目录结构计算出来。 
 - 

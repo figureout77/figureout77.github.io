@@ -1,8 +1,8 @@
 ---
-title: markdown-test
+title: markdown-notes
 date: 2018-05-21 10:30:14
-tags: markdown
-categories:
+tags: [markdown]
+categories: 技术
 ---
 ## 标题
 &#35; 二级标题
@@ -15,7 +15,8 @@ categories:
 ## 粗体斜体
 *斜体文本* _斜体文本_
 **粗体文本** __粗体文本__
-***粗斜体文本*** ___粗斜体文本___
+***粗斜体文本*** ___粗斜体文本___  
+<!-- more -->
 
 ## 链接
 文字链接 [github link](https://figureout77.github.io)
@@ -26,7 +27,6 @@ categories:
 
 [1]: http://www.baidu.com/
 [bing]: http://www.bing.com.cn
-<!-- more -->
 ## 列表
 普通无序列表
 - 列表文本前使用
@@ -136,7 +136,6 @@ console.log('hello world');
 e.g. 重点是`关键字`
 
 ## 图片
-<!-- ![sherlock](./images/sh.jpg "sherlock") -->
 引用自带图片  
 根目录_config.yml开启(hexo 3.0及以上)
 ```
