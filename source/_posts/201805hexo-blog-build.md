@@ -13,13 +13,13 @@ tags: [hexo, github-pages, blog, yilia]
 
 但是服务器启动不起来，经过搜索引擎得知，是端口号被福昕阅读器的一个服务占用。  
 > 1. 命令行输入`netstat -ano` 查看4000端口号，找到对应PID
-2. 打开windows任务管理器->服务->对应PID服务是否存在
+2. 打开windows任务管理器->服务->对应PID服务是否存在  
 
+<!-- more   -->
 Solutions:  
 > 1. 一次性的：`$ hexo s -p 5000`
 2. 一次性的：杀掉4000进程  
 3. 在站点配置文件_config.yml加入 
-<!-- more   -->
 ``` yml
 # Server Port
 server:
