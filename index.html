@@ -150,6 +150,120 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-201906git-common-usage" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/30/201906git-common-usage/">git-common-usage</a>
+    </h1>
+  
+
+        
+        <a href="/2019/06/30/201906git-common-usage/" class="archive-article-date">
+  	<time datetime="2019-06-30T09:05:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第二弹！</p>
+<p>假设你的网络里有一个在 git.ourcompany.com 的 Git 服务器。 如果你从这里克隆，Git 的 clone 命令会为你自动将其命名为 origin，拉取它的所有数据，创建一个指向它的 master 分支的指针，并且在本地将其命名为 origin/master。 Git 也会给你一个与 origin 的 master 分支在指向同一个地方的本地 master 分支，这样你就有工作的基础。 </p>
+<blockquote>
+<ol>
+<li>Gitflow</li>
+<li>基于Git分支的开发模型：<ul>
+<li>develop分支（频繁变化的一个分支）</li>
+<li>test分支（供测试与产品等人员使用的一个分支，变化不是特别频繁。</li>
+<li>master分支（生产发布分支，变化非常不频繁的一个分支）</li>
+<li>bugfix(hotfix)分支（生产系统中出现了紧急bug，用于紧急修复的分支）</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol>
+<li>push操作的完整命令是：git push origin srcBranch:destBranch</li>
+<li>pull操作的完整命令是：git pull origin srcBranch:destBranch</li>
+<li>HEAD标记：HEAD文件是一个指向你当前所在分支的引用标识符，该文件内部并不包含SHA-1值，而是一个指向另外一个引用的指针。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol>
+<li><p>git diff: 比较的是暂存区与工作区文件之间的差别。</p>
+</li>
+<li><p>git diff HEAD: 比较的是最新的提交与工作区之间的差别。</p>
+</li>
+<li><p>git diff —cached: 比较的是最新的提交与暂存区之间的差别。</p>
+        
+          <a class="article-more-a" href="/2019/06/30/201906git-common-usage/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/skills//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/30/201906git-common-usage/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-201812review" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -520,7 +634,8 @@
         <h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><ul>
 <li>版本控制(VCS)是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</li>
 <li>RCS(Revision Control System)工作原理：在硬盘上保存补丁集（补丁是指文件修订前后的变化）</li>
-<li>CVCS（集中化的版本控制系统）有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。  <ul>
+<li><p>CVCS（集中化的版本控制系统）有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。  </p>
+<ul>
 <li>缺点：中央服务器的单点故障(e.g. 宕机，磁盘损坏)</li>
 </ul>
 </li>
@@ -1030,6 +1145,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
@@ -1039,10 +1158,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">小偷家族</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
             <div class="clearfix"></div>

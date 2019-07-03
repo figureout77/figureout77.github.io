@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>git-notes | figureout77</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基础知识介绍 版本控制(VCS)是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。 RCS(Revision Control System)工作原理：在硬盘上保存补丁集（补丁是指文件修订前后的变化） CVCS（集中化的版本控制系统）有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。   缺点：中央服务器">
+  <meta name="description" content="基础知识介绍 版本控制(VCS)是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。 RCS(Revision Control System)工作原理：在硬盘上保存补丁集（补丁是指文件修订前后的变化） CVCS（集中化的版本控制系统）有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。    缺点：中央服务">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git-notes">
 <meta property="og:url" content="http://yoursite.com/2018/08/01/201808git-notes/index.html">
 <meta property="og:site_name" content="figureout77">
-<meta property="og:description" content="基础知识介绍 版本控制(VCS)是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。 RCS(Revision Control System)工作原理：在硬盘上保存补丁集（补丁是指文件修订前后的变化） CVCS（集中化的版本控制系统）有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。   缺点：中央服务器">
+<meta property="og:description" content="基础知识介绍 版本控制(VCS)是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。 RCS(Revision Control System)工作原理：在硬盘上保存补丁集（补丁是指文件修订前后的变化） CVCS（集中化的版本控制系统）有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。    缺点：中央服务">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://git-scm.com/book/en/v2/images/snapshots.png">
 <meta property="og:image" content="https://git-scm.com/book/en/v2/images/areas.png">
@@ -22,10 +22,10 @@
 <meta property="og:image" content="https://git-scm.com/book/en/v2/images/commit-and-tree.png">
 <meta property="og:image" content="https://git-scm.com/book/en/v2/images/commits-and-parents.png">
 <meta property="og:image" content="https://git-scm.com/book/en/v2/images/lr-branches-2.png">
-<meta property="og:updated_time" content="2019-06-30T08:39:15.130Z">
+<meta property="og:updated_time" content="2019-06-30T09:24:42.827Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git-notes">
-<meta name="twitter:description" content="基础知识介绍 版本控制(VCS)是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。 RCS(Revision Control System)工作原理：在硬盘上保存补丁集（补丁是指文件修订前后的变化） CVCS（集中化的版本控制系统）有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。   缺点：中央服务器">
+<meta name="twitter:description" content="基础知识介绍 版本控制(VCS)是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。 RCS(Revision Control System)工作原理：在硬盘上保存补丁集（补丁是指文件修订前后的变化） CVCS（集中化的版本控制系统）有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。    缺点：中央服务">
 <meta name="twitter:image" content="https://git-scm.com/book/en/v2/images/snapshots.png">
   
     <link rel="alternative" href="/atom.xml" title="figureout77" type="application/atom+xml">
@@ -183,7 +183,8 @@
         <h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><ul>
 <li>版本控制(VCS)是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</li>
 <li>RCS(Revision Control System)工作原理：在硬盘上保存补丁集（补丁是指文件修订前后的变化）</li>
-<li>CVCS（集中化的版本控制系统）有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。  <ul>
+<li><p>CVCS（集中化的版本控制系统）有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。  </p>
+<ul>
 <li>缺点：中央服务器的单点故障(e.g. 宕机，磁盘损坏)</li>
 </ul>
 </li>
@@ -269,7 +270,10 @@
 <p><code>fast-forward</code> 只将指针向前推进，合并操作没有需要解决的分歧。<br>渐进稳定分支的流水线(‘silo’)视图：<br><img src="https://git-scm.com/book/en/v2/images/lr-branches-2.png" alt>  </p>
 <p><code>rebase</code> <a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA" target="_blank" rel="noopener">变基</a> 是提交到某一分支上的所有修改都移至另一分支上  </p>
 <h3 id="Git协议"><a href="#Git协议" class="headerlink" title="Git协议"></a>Git协议</h3><p>Git可以使用四种主要的协议来传输资料：本地协议（local），HTTP协议，SSH(Secure Shell)协议及Git协议。</p>
-<p>*Reference:<br><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener">git在线文档</a></p>
+<p><strong>P.S.</strong></p>
+<p>Freenode IRC 服务器（ irc.freenode.net ）的 #git 或 #github 频道</p>
+<p><strong><em>Reference</em></strong><br><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener">git在线文档</a></p>
+<p><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰git教程</a></p>
 
       
 
@@ -566,6 +570,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
@@ -575,10 +583,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">小偷家族</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: markdown | figureout77</title>
+  <title>git-common-usage | figureout77</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="figureout77">
-<meta property="og:url" content="http://yoursite.com/tags/markdown/index.html">
+  <meta name="description" content="第二弹！ 假设你的网络里有一个在 git.ourcompany.com 的 Git 服务器。 如果你从这里克隆，Git 的 clone 命令会为你自动将其命名为 origin，拉取它的所有数据，创建一个指向它的 master 分支的指针，并且在本地将其命名为 origin/master。 Git 也会给你一个与 origin 的 master 分支在指向同一个地方的本地 master 分支，这样你">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git-common-usage">
+<meta property="og:url" content="http://yoursite.com/2019/06/30/201906git-common-usage/index.html">
 <meta property="og:site_name" content="figureout77">
+<meta property="og:description" content="第二弹！ 假设你的网络里有一个在 git.ourcompany.com 的 Git 服务器。 如果你从这里克隆，Git 的 clone 命令会为你自动将其命名为 origin，拉取它的所有数据，创建一个指向它的 master 分支的指针，并且在本地将其命名为 origin/master。 Git 也会给你一个与 origin 的 master 分支在指向同一个地方的本地 master 分支，这样你">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://i.imgur.com/ftHXoig.png">
+<meta property="og:image" content="https://i.imgur.com/CpDtvnE.png">
+<meta property="og:updated_time" content="2019-07-03T10:33:40.947Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="figureout77">
+<meta name="twitter:title" content="git-common-usage">
+<meta name="twitter:description" content="第二弹！ 假设你的网络里有一个在 git.ourcompany.com 的 Git 服务器。 如果你从这里克隆，Git 的 clone 命令会为你自动将其命名为 origin，拉取它的所有数据，创建一个指向它的 master 分支的指针，并且在本地将其命名为 origin/master。 Git 也会给你一个与 origin 的 master 分支在指向同一个地方的本地 master 分支，这样你">
+<meta name="twitter:image" content="https://i.imgur.com/ftHXoig.png">
   
     <link rel="alternative" href="/atom.xml" title="figureout77" type="application/atom+xml">
   
@@ -148,48 +156,204 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-201906git-common-usage" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/21/201805markdown-notes/" class="archive-article-date">
-  	<time datetime="2018-05-21T02:30:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/21/201805markdown-notes/">markdown-notes</a>
+    <h1 class="article-title" itemprop="name">
+      git-common-usage
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/06/30/201906git-common-usage/" class="archive-article-date">
+  	<time datetime="2019-06-30T09:05:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第二弹！</p>
+<p>假设你的网络里有一个在 git.ourcompany.com 的 Git 服务器。 如果你从这里克隆，Git 的 clone 命令会为你自动将其命名为 origin，拉取它的所有数据，创建一个指向它的 master 分支的指针，并且在本地将其命名为 origin/master。 Git 也会给你一个与 origin 的 master 分支在指向同一个地方的本地 master 分支，这样你就有工作的基础。 </p>
+<blockquote>
+<ol>
+<li>Gitflow</li>
+<li>基于Git分支的开发模型：<ul>
+<li>develop分支（频繁变化的一个分支）</li>
+<li>test分支（供测试与产品等人员使用的一个分支，变化不是特别频繁。</li>
+<li>master分支（生产发布分支，变化非常不频繁的一个分支）</li>
+<li>bugfix(hotfix)分支（生产系统中出现了紧急bug，用于紧急修复的分支）</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol>
+<li>push操作的完整命令是：git push origin srcBranch:destBranch</li>
+<li>pull操作的完整命令是：git pull origin srcBranch:destBranch</li>
+<li>HEAD标记：HEAD文件是一个指向你当前所在分支的引用标识符，该文件内部并不包含SHA-1值，而是一个指向另外一个引用的指针。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol>
+<li><p>git diff: 比较的是暂存区与工作区文件之间的差别。</p>
+</li>
+<li><p>git diff HEAD: 比较的是最新的提交与工作区之间的差别。</p>
+</li>
+<li><p>git diff —cached: 比较的是最新的提交与暂存区之间的差别。</p>
+<a id="more"></a>
+</li>
+</ol>
+</blockquote>
+<h4 id="QA"><a href="#QA" class="headerlink" title="QA"></a>QA</h4><h5 id="1-如何让git忽略现加入gitignore中的被追踪文件？"><a href="#1-如何让git忽略现加入gitignore中的被追踪文件？" class="headerlink" title="1. 如何让git忽略现加入gitignore中的被追踪文件？"></a>1. 如何让git忽略现加入gitignore中的被追踪文件？</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached .</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"fixed untracked files"</span></span><br></pre></td></tr></table></figure>
+<p><strong><em>Reference</em></strong></p>
+<p> <a href="https://stackoverflow.com/questions/11451535/gitignore-is-not-working" target="_blank" rel="noopener">gitignore-is-not-working</a></p>
+<p><a href="https://stackoverflow.com/questions/1274057/how-to-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore" target="_blank" rel="noopener">how-to-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore</a></p>
+<h5 id="2-文件删除问题"><a href="#2-文件删除问题" class="headerlink" title="2. 文件删除问题"></a>2. 文件删除问题</h5><p><img src="https://i.imgur.com/ftHXoig.png" alt="command created"></p>
+<p><img src="https://i.imgur.com/CpDtvnE.png" alt="file directory"></p>
+<p>生成<code>ssh key</code>的时候不小心创建了名为<code>cd ..</code>的文件，尝试了命令删除无效。</p>
+<p>解决方法1：</p>
+<ul>
+<li><p>将<code>&lt;path/to/git&gt;latestusrbin</code>加到<code>%PATH%</code>环境变量中</p>
+</li>
+<li><p>cmd查看PATH变量：set path</p>
+</li>
+<li>添加PATH变量（一次性）: set PATH=%PATH%;path</li>
+<li>找到要删除的路径，输入 <code>rm cd*</code></li>
+</ul>
+<p>解决方法2：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">del <span class="string">"?D:LernenGitlearngitgitskillscd .."</span></span><br></pre></td></tr></table></figure>
+<p><strong><em>Reference</em></strong></p>
+<p><a href="https://stackoverflow.com/questions/45558587/cannot-find-file-to-delete-via-git-bash-but-it-shows-up-in-file-explorer" target="_blank" rel="noopener">stackoverflow solution</a></p>
+<h5 id="3-修改git提交记录中的邮箱地址"><a href="#3-修改git提交记录中的邮箱地址" class="headerlink" title="3. 修改git提交记录中的邮箱地址"></a>3. 修改git提交记录中的邮箱地址</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git filter-branch --commit-filter <span class="string">'</span></span><br><span class="line"><span class="string">        if [ "$GIT_AUTHOR_EMAIL" = "schacon@localhost" ];</span></span><br><span class="line"><span class="string">        then</span></span><br><span class="line"><span class="string">                GIT_AUTHOR_NAME="Scott Chacon";</span></span><br><span class="line"><span class="string">                GIT_AUTHOR_EMAIL="schacon@example.com";</span></span><br><span class="line"><span class="string">                git commit-tree "$@";</span></span><br><span class="line"><span class="string">        else</span></span><br><span class="line"><span class="string">                git commit-tree "$@";</span></span><br><span class="line"><span class="string">        fi’ HEAD</span></span><br></pre></td></tr></table></figure>
+<p>这会遍历并重写每一个提交来包含你的新邮箱地址。 因为提交包含了它们父提交的 SHA-1 校验和，这个命令会修改你的历史中的每一个提交的 SHA-1 校验和，而不仅仅只是那些匹配邮箱地址的提交。</p>
+<h4 id="git-fork-amp-pull-request"><a href="#git-fork-amp-pull-request" class="headerlink" title="git fork &amp; pull-request"></a>git fork &amp; pull-request</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add upstream https://github.com/octocat/Spoon-Knife.git</span><br><span class="line">$ git fetch upstream</span><br><span class="line">$ git checkout master</span><br><span class="line">$ git merge upstream/master</span><br></pre></td></tr></table></figure>
+<p><code>git request-pull [-p] &lt;start&gt; &lt;url&gt; [&lt;end&gt;]</code></p>
+<p><code>git push origin master:destBranch</code></p>
+<p><code>git request-pull origin master:destBranch</code></p>
+<h4 id="git-rebase"><a href="#git-rebase" class="headerlink" title="git rebase"></a>git rebase</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> A---B---C topic</span><br><span class="line">     /</span><br><span class="line">D---E---F---G master</span><br></pre></td></tr></table></figure>
+<p>after:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(branch topic) git rebase master</span><br><span class="line">$(branch topic) git rebase master topic</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">          A&apos;--B&apos;--C&apos; topic</span><br><span class="line">             /</span><br><span class="line">D---E---F---G master</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(branch master) git merge topic</span><br></pre></td></tr></table></figure>
+<h4 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h4><ul>
+<li>命名 </li>
+</ul>
+<p>/etc/gitconfig –system </p>
+<p>~/.gitconfig –global </p>
+<p>.git/config –local </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">''</span></span><br><span class="line">git config --global user.email <span class="string">''</span></span><br></pre></td></tr></table></figure>
+<p><code>ctrl</code> + a 光标回到首位 </p>
+<p><code>ctrl</code> + e 光标回到末位 </p>
+<p><code>ctrl</code> + q or u 清除当前输入命令</p>
+<p><code>git log --graph</code> 查看log </p>
+<p><code>git comit -am</code> =&gt; add and commit </p>
+<p><code>git reflog</code> 查看操作日志 </p>
+<p><code>HEAD</code>指向的是当前使用分支 </p>
+<p><code>git blame filename</code> 查看文件每行最后提交信息 </p>
+<blockquote>
+<p>If the line has been modified since it’s been added, you can still <code>git blame</code> to find out the last commit on which the line was altered, and then <code>git checkout &lt;sha&gt;~1</code> (where <code>sha</code> is the sha that shows up in the original <code>git blame</code>) and <code>git blame</code> again to go back in the history for that line.</p>
+</blockquote>
+<p><code>git commit --amend --reset-author</code> only one commit can be changed.</p>
+<p><code>git checkout -b 本地分支名 origin/远程分支名</code>本地创建分支并拉取远程分支</p>
+<p><code>git push -u &lt;remote name&gt; &lt;branch name&gt;</code>上传新的分支，并且追踪远程的分支</p>
+<p><code>git push -u origin srcBranch:destBranch</code> 为已有本地分支推送并追踪远程分支</p>
+<p><code>git branch -u upstream/foo foo</code> 为已有分支追踪远程分支</p>
+<p><code>git branch -av</code> 列出所有分支</p>
+<p><code>git branch -vv</code> 所有的本地分支和提交信息，包括正在跟踪的远程分支与本地分支是否是领先、落后或是都有。</p>
+<p><code>git push origin --delete &lt;branchName&gt;</code> 删除远程分支</p>
+<p><code>git reset --hard HEAD^1</code> 回退到上个版本</p>
+<p><code>git reset --soft HEAD^1</code> 回退到上个版本，会保留变更</p>
+<p><code>git reset HEAD -- .</code> 从暂存区移除至工作区 or <code>git reset @</code> @ is synonymous with HEAD</p>
+<p><code>git rm --cached -r .</code> 移除文件（暂存态or已提交）为未暂存（工作区）状态</p>
+<p><code>git checkout -- .</code>移除工作区全部文件 </p>
+<p><code>git checkout -- path/to/file/to/revert</code> 移除工作区单个文件 </p>
+<p><code>git clean -d -f</code> 移除工作区未跟踪文件(-f, –force 删除文件夹)</p>
+<p><code>git show commitId fileName</code> 查看某次commit中具体某个文件的修改</p>
+<p><code>git log -1 --stat</code> 查看最新提交记录，并列出文件变更</p>
+<p><code>git remote prune origin --dry-run</code> 预览可以被移除的本地远程分支e.g. remotes/origin/branchName</p>
+<p><code>git remote prune origin</code> 删除本地远程分支索引</p>
+<p>Deletes all stale remote-tracking branches. These stale branches have already been removed from the remote repository referenced by, but are still locally available in “remotes/“.</p>
+<h4 id="fast-forward"><a href="#fast-forward" class="headerlink" title="fast-forward"></a>fast-forward</h4><ul>
+<li>如果可能，合并分支时Git会使用fast-forward模式 </li>
+<li>在这种模式下，删除分支时会丢掉分支信息 </li>
+<li><p>合并时加上<code>--no-ff</code>参数会禁用<code>fast-forward</code>，这样会多出一个commit id </p>
+<ul>
+<li><code>git merge --no-ff dev</code> </li>
+</ul>
+</li>
+</ul>
+<h4 id="保存工作现场"><a href="#保存工作现场" class="headerlink" title="保存工作现场"></a>保存工作现场</h4><ul>
+<li>保存现场<ul>
+<li><code>git stash</code></li>
+<li><code>git stash list</code></li>
+</ul>
+</li>
+<li>恢复现场<ul>
+<li><code>git stash apply</code>（stash内容并不删除，需要通过<code>git stash drop stash@{0}</code>手动删除）<ul>
+<li>e.g. <code>git stash apply stash@{0}</code></li>
+</ul>
+</li>
+<li><code>git stash pop</code>（恢复的同时也将stash内容删除）</li>
+</ul>
+</li>
+</ul>
+<h4 id="Git标签"><a href="#Git标签" class="headerlink" title="Git标签"></a>Git标签</h4><ul>
+<li>新建标签，标签有两种：轻量级标签（lightweight）与带有附注标签（annotated)</li>
+<li><code>git tag v1.0.1</code> vs <code>git tag -a v1.0.2 -m &#39;release version&#39;</code></li>
+<li><code>git tag -d tag_name</code></li>
+</ul>
+<h4 id="core-pager"><a href="#core-pager" class="headerlink" title="core.pager"></a>core.pager</h4><p>该配置项指定 <code>Git</code> 运行诸如 <code>log</code> 和 <code>diff</code> 等命令所使用的分页器。 你可以把它设置成用 <code>more</code> 或者任何你喜欢的分页器（默认用的是 <code>less</code>），当然也可以设置成空字符串，关闭该选项：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.pager <span class="string">''</span></span><br></pre></td></tr></table></figure>
+<p>这样不管命令的输出量多少，Git 都会在一页显示所有内容。</p>
+<h4 id="reference"><a href="#reference" class="headerlink" title="reference"></a><strong><em>reference</em></strong></h4><ol>
+<li><a href="https://www.bilibili.com/video/av41610502" target="_blank" rel="noopener">Git应用详解-Bilibili</a></li>
+<li><a href="https://stackoverflow.com/questions/520650/make-an-existing-git-branch-track-a-remote-branch" target="_blank" rel="noopener">make-an-existing-git-branch-track-a-remote-branch</a></li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -202,17 +366,104 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/30/201906git-common-usage/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/12/31/201812review/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">月光宝盒</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -235,9 +486,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
